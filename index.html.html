@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LocalHelp | Find Help Near You</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛠️ Local<span>Help</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#find">Find Help</a></li>
+            <li><a href="#request">Request Help</a></li>
+        </ul>
+
+        <button class="nav-btn" onclick="emergencyHelp()">
+            🚨 Emergency
+        </button>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🤝 Help is closer than you think
+            </div>
+
+            <h1>
+                Find Local Help.<br>
+                <span>Get Things Done.</span>
+            </h1>
+
+            <p>
+                LocalHelp connects you with trusted people and
+                services near you. Find plumbers, electricians,
+                doctors, drivers, repair workers and more.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#find" class="primary-btn">
+                    🔍 Find Help
+                </a>
+
+                <a href="#request" class="secondary-btn">
+                    📢 Request Help
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+            🏠
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services" id="services">
+
+        <h2 class="section-title">
+            What do you need help with?
+        </h2>
+
+        <p class="section-subtitle">
+            Find reliable local services quickly.
+        </p>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🔧
+                </div>
+
+                <h3>Plumber</h3>
+
+                <p>
+                    Find plumbers for leaks, pipes,
+                    taps and water problems.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚡
+                </div>
+
+                <h3>Electrician</h3>
+
+                <p>
+                    Get help with electrical repairs,
+                    wiring and installations.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🩺
+                </div>
+
+                <h3>Doctor</h3>
+
+                <p>
+                    Find nearby doctors and healthcare
+                    services.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🚗
+                </div>
+
+                <h3>Driver</h3>
+
+                <p>
+                    Find local drivers for rides,
+                    deliveries and transportation.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🏠
+                </div>
+
+                <h3>Home Repair</h3>
+
+                <p>
+                    Get help with painting, carpentry
+                    and home maintenance.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📱
+                </div>
+
+                <h3>Tech Support</h3>
+
+                <p>
+                    Get help fixing phones, computers
+                    and other devices.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🧹
+                </div>
+
+                <h3>Cleaning</h3>
+
+                <p>
+                    Find people for home and office
+                    cleaning services.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📦
+                </div>
+
+                <h3>Delivery</h3>
+
+                <p>
+                    Find local people who can help
+                    with deliveries.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FIND HELP ================= -->
+
+    <section class="find-help" id="find">
+
+        <h2 class="section-title">
+            Find Help Near You
+        </h2>
+
+        <p class="section-subtitle">
+            Search for a service in your area.
+        </p>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Enter your location"
+            >
+
+
+            <select id="service">
+
+                <option value="">
+                    Select Service
+                </option>
+
+                <option value="Plumber">
+                    🔧 Plumber
+                </option>
+
+                <option value="Electrician">
+                    ⚡ Electrician
+                </option>
+
+                <option value="Doctor">
+                    🩺 Doctor
+                </option>
+
+                <option value="Driver">
+                    🚗 Driver
+                </option>
+
+                <option value="Home Repair">
+                    🏠 Home Repair
+                </option>
+
+                <option value="Tech Support">
+                    📱 Tech Support
+                </option>
+
+                <option value="Cleaning">
+                    🧹 Cleaning
+                </option>
+
+                <option value="Delivery">
+                    📦 Delivery
+                </option>
+
+            </select>
+
+
+            <button
+                class="search-btn"
+                onclick="findHelp()"
+            >
+                Search
+            </button>
+
+        </div>
+
+
+        <div class="help-grid" id="results">
+
+            <div class="help-card">
+
+                <h3>🔧 QuickFix Plumbing</h3>
+
+                <p>
+                    Plumbing repairs and emergency
+                    pipe services.
+                </p>
+
+                <div class="location">
+                    📍 Available near you
+                </div>
+
+            </div>
+
+
+            <div class="help-card">
+
+                <h3>⚡ PowerCare Electricians</h3>
+
+                <p>
+                    Electrical repairs and home
+                    wiring services.
+                </p>
+
+                <div class="location">
+                    📍 Available near you
+                </div>
+
+            </div>
+
+
+            <div class="help-card">
+
+                <h3>🩺 CarePoint Clinic</h3>
+
+                <p>
+                    General healthcare and medical
+                    consultation.
+                </p>
+
+                <div class="location">
+                    📍 Available near you
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REQUEST HELP ================= -->
+
+    <section class="request-section" id="request">
+
+        <h2>
+            Can't find what you need?
+        </h2>
+
+        <p>
+            Tell us what kind of help you need
+            and connect with someone nearby.
+        </p>
+
+        <button
+            class="request-btn"
+            onclick="requestHelp()"
+        >
+            📢 Request Help
+        </button>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>🛠️ LocalHelp</h3>
+
+        <p>
+            Connecting communities with local help.
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 LocalHelp. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+<!-- REQUEST HELP SECTION -->
+<section class="request-section" id="request">
+
+    <div class="request-container">
+
+        <div class="request-heading">
+            <span>🆘 REQUEST HELP</span>
+            <h2>Need Help? We're Here.</h2>
+            <p>
+                Tell us what you need and your location.
+                A nearby service provider can help you.
+            </p>
+        </div>
+
+        <form id="helpForm" class="help-form">
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+            </div>
+
+            <!-- Location -->
+            <div class="form-group">
+                <label for="location">Your Location</label>
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Example: Bangalore"
+                    required
+                >
+            </div>
+
+            <!-- Service -->
+            <div class="form-group">
+                <label for="service">What Help Do You Need?</label>
+
+                <select id="service" required>
+                    <option value="">Select a service</option>
+                    <option value="Plumber">🔧 Plumber</option>
+                    <option value="Electrician">⚡ Electrician</option>
+                    <option value="Mechanic">🚗 Mechanic</option>
+                    <option value="Doctor">🩺 Doctor</option>
+                    <option value="Home Repair">🏠 Home Repair</option>
+                    <option value="Driver">🚕 Driver</option>
+                    <option value="Cleaning">🧹 Cleaning</option>
+                    <option value="Other">🛠️ Other</option>
+                </select>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group full-width">
+                <label for="description">Describe Your Problem</label>
+
+                <textarea
+                    id="description"
+                    rows="5"
+                    placeholder="Tell us what help you need..."
+                    required
+                ></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="request-submit">
+                📨 Submit Request
+            </button>
+
+        </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message">
+
+            <div class="success-icon">✅</div>
+
+            <h3>Request Submitted!</h3>
+
+            <p>
+                Your request has been received.
+                A nearby service provider can contact you soon.
+            </p>
+
+            <button onclick="closeSuccess()">
+                Done
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
